@@ -50,7 +50,7 @@ function DonationForm() {
       data.append('whatsapp', formData.whatsapp);
       if (formData.image) data.append('image', formData.image);
 
-      await axios.post('http://localhost:3000/api/donations', data, {
+      await axios.post('https://food-waste-donation.onrender.com/api/donations', data, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'multipart/form-data',

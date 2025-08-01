@@ -13,7 +13,7 @@ function Login({ onLogin }) {
     e.preventDefault();
 
     try {
-      const res = await axios.post('http://localhost:3000/api/auth/login', {
+      const res = await axios.post('https://food-waste-donation.onrender.com/api/auth/login', {
         username,
         password,
       });
@@ -24,7 +24,7 @@ function Login({ onLogin }) {
         return;
       }
 
-      const userRes = await axios.get('http://localhost:3000/api/auth/me', {
+      const userRes = await axios.get('https://food-waste-donation.onrender.com/api/auth/me', {
         headers: { Authorization: `Bearer ${token}` },
       });
 

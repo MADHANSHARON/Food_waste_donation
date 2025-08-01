@@ -10,7 +10,7 @@ function DonationLocation() {
   useEffect(() => {
     const fetchDonation = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/api/donations/${id}`);
+        const res = await axios.get(`https://food-waste-donation.onrender.com/api/donations/${id}`);
         setDonation(res.data);
       } catch (err) {
         console.error('Error fetching donation:', err);

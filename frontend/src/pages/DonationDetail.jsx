@@ -13,7 +13,7 @@ function DonationDetail() {
   useEffect(() => {
     const fetchDonation = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/api/donations/${id}`);
+        const res = await axios.get(`https://food-waste-donation.onrender.com/api/donations/${id}`);
         setDonation(res.data);
         setError('');
       } catch (err) {
@@ -26,7 +26,7 @@ function DonationDetail() {
 
   const handleAccept = async () => {
     try {
-      await axios.patch(`http://localhost:3000/api/donations/${id}/accept`);
+      await axios.patch(`https://food-waste-donation.onrender.com/api/donations/${id}/accept`);
       setMessage('Food accepted successfully!');
       navigate(`/donation/${id}/location`);
     } catch (err) {
@@ -44,7 +44,7 @@ function DonationDetail() {
 
       {donation.image && (
         <img
-          src={`http://localhost:3000${donation.image}`}
+          src={`https://food-waste-donation.onrender.com${donation.image}`}
           alt={donation.foodType}
         />
       )}
@@ -58,7 +58,7 @@ function DonationDetail() {
           target="_blank"
           rel="noreferrer"
         >
-           View on Google Maps
+          View on Google Maps
         </a>
       </p>
 

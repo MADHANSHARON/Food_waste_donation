@@ -12,7 +12,7 @@ function Register() {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3000/api/auth/register", {
+      await axios.post("https://food-waste-donation.onrender.com/api/auth/register", {
         username,
         email,
         password
@@ -28,12 +28,27 @@ function Register() {
     <div className="auth-container">
       <h2>Register</h2>
       <form onSubmit={handleRegister}>
-        <input type="text" placeholder="Username" value={username}
-          onChange={(e) => setUsername(e.target.value)} required />
-        <input type="email" placeholder="Email" value={email}
-          onChange={(e) => setEmail(e.target.value)} required />
-        <input type="password" placeholder="Password" value={password}
-          onChange={(e) => setPassword(e.target.value)} required />
+        <input
+          type="text"
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          required
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
         <button type="submit">Register</button>
       </form>
     </div>

@@ -10,7 +10,7 @@ function Receive() {
   useEffect(() => {
     const fetchAvailableDonations = async () => {
       try {
-        const res = await axios.get('http://localhost:3000/api/donations/available');
+        const res = await axios.get('https://food-waste-donation.onrender.com/api/donations/available');
         setDonations(res.data);
         setError('');
       } catch (err) {
@@ -37,7 +37,7 @@ function Receive() {
 
               {item.image && (
                 <img
-                  src={`http://localhost:3000${item.image}`}
+                  src={`https://food-waste-donation.onrender.com${item.image}`}
                   alt={item.foodType}
                 />
               )}
