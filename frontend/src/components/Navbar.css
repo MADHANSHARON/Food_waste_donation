@@ -1,0 +1,190 @@
+/* Navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3e8e7e;
+  color: white;
+  padding: 16px 32px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-right {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  position: relative;
+}
+
+.btn {
+  padding: 10px 16px;
+  background-color: white;
+  color: #3e8e7e;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #c9f3ea;
+}
+
+.logout {
+  background-color: #f8d7da;
+  color: #842029;
+}
+
+.logout:hover {
+  background-color: #f1aeb5;
+}
+
+/* Active button style */
+.btn.active {
+  background-color: #145e53;
+  color: white;
+  font-weight: bold;
+}
+
+/* Show Options Button */
+.show-options-btn {
+  display: none;
+}
+
+/* Hidden mobile menu container */
+.mobile-options {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background-color: #2b6d62;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.mobile-options.show {
+  display: flex;
+}
+
+/* Tablet View */
+
+
+/* Mobile View */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    width: auto;
+  }
+
+  .navbar-right {
+    gap: 8px;
+  }
+
+  /* Hide dashboard/donate/receive by default */
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .show-options-btn {
+    display: block;
+    background-color: white;
+    color: #3e8e7e;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+/* For toggle button */
+.toggle-btn {
+  display: none;
+}
+
+/* Slide panel hidden by default */
+.slide-panel {
+  display: flex;
+  gap: 12px;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Mobile view hidden initially */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .toggle-btn {
+    display: block;
+    background-color: #fff;
+    color: #3e8e7e;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-left: auto;
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .slide-panel {
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 64px;
+    right: 0;
+    background-color: rgba(226, 243, 239, 0.9); /* slightly transparent */
+    width: 160px;
+    padding: 10px;
+    border-radius: 8px 0 0 8px;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1000;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .slide-panel.show {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .slide-panel .btn {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    padding: 6px 10px;
+    background-color: transparent;
+    border: none;
+    color: #3e8e7e;
+    transition: background-color 0.3s;
+  }
+
+  .slide-panel .btn:hover {
+    background-color: rgba(62, 142, 126, 0.1);
+  }
+}

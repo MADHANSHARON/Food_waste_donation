@@ -1,0 +1,159 @@
+.donation-form-container {
+  background: linear-gradient(to bottom right, #ffffff, #f0f4f8);
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+  margin-top: 30px;
+}
+
+.donation-form-container h2 {
+  text-align: center;
+  color: #2e3a59;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.donation-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.donation-form-container input[type="text"],
+.donation-form-container input[type="number"],
+.donation-form-container input[type="datetime-local"],
+.donation-form-container input[type="file"],
+.donation-form-container input[type="tel"],
+.donation-form-container textarea,
+.donation-form-container select {
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  transition: border 0.3s ease;
+}
+
+.donation-form-container input:focus,
+.donation-form-container select:focus,
+.donation-form-container textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Quantity in row */
+.donation-form-container input[name="quantityAmount"] {
+  width: 70%;
+  display: inline-block;
+  margin-right: 5%;
+}
+
+.donation-form-container select[name="quantityUnit"] {
+  width: 25%;
+  display: inline-block;
+  padding: 12px;
+  font-size: 16px;
+}
+
+/* Submit Button */
+.donation-form-container button[type="submit"] {
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.donation-form-container button[type="submit"]:hover {
+  background-color: #3e9143;
+}
+
+/* Success & Error Messages */
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.quantity-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+.quantity-row input[type="number"] {
+  flex: 2;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.quantity-row select {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 600px) {
+  .quantity-row {
+    flex-direction: column;
+  }
+
+  .quantity-row input,
+  .quantity-row select {
+    width: 100%;
+  }
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .donation-form-container {
+    padding: 20px;
+  }
+
+  .donation-form-container h2 {
+    font-size: 22px;
+  }
+
+  .donation-form-container input[name="quantityAmount"],
+  .donation-form-container select[name="quantityUnit"] {
+    width: 100%;
+    margin: 0 0 10px 0;
+    display: block;
+  }
+
+  .donation-form-container button[type="submit"] {
+    font-size: 16px;
+  }
+}

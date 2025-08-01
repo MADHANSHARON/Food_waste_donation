@@ -1,0 +1,172 @@
+/* src/pages/Home.css */
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #f7fdfc 50%, #e5f7f4 50%);
+}
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3e8e7e;
+  color: white;
+  padding: 20px 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 26px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.auth-buttons .btn {
+  margin-left: 16px;
+  padding: 10px 20px;
+  background-color: white;
+  color: #3e8e7e;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-buttons .btn:hover {
+  background-color: #dff5f0;
+}
+
+.home-main {
+  display: flex;
+  flex: 1;
+  padding: 60px 40px;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url('../assets/donation1.jpg');
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.home-main h1 {
+  font-size: 48px;
+  color: #2e5c57;
+  margin-bottom: 20px;
+}
+
+.home-main p {
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+}
+.home-main {
+  display: flex;
+  flex: 1;
+  padding: 40px;
+  background-color: #f7fdfc;
+}
+
+.home-left {
+  flex: 1;
+  display: flex;
+ 
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+.home-left h1 {
+  font-size: 42px;
+  color: #2e5c57;
+  margin-bottom: 20px;
+}
+
+.home-left p {
+  
+  font-size: 30px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.home-right {
+  
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+/* ---------- Responsive Design ---------- */
+@media (max-width: 1600px) {
+  .home-main {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .home-left, .home-right {
+    flex: none;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .home-left h1 {
+    font-size: 32px;
+  }
+
+  .home-left p {
+    font-size: 16px;
+  }
+
+  .home-right img {
+    max-width: 80%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .home-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .auth-buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .auth-buttons .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .home-header {
+    flex-direction: row;
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .auth-buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .auth-buttons .btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+}

@@ -1,0 +1,90 @@
+/* DonationDetail.css */
+
+.donation-detail-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdfdfd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.donation-detail-container h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-size: 28px;
+}
+
+.donation-detail-container img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+.donation-detail-container p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #555;
+}
+
+.donation-detail-container strong {
+  color: #333;
+}
+
+.donation-detail-container a {
+  color: #1e88e5;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.donation-detail-container a:hover {
+  text-decoration: underline;
+}
+
+.donation-detail-container button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.donation-detail-container button:hover {
+  background-color: #43a047;
+}
+
+.donation-detail-container .success-message {
+  color: green;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.donation-detail-container .error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .donation-detail-container {
+    padding: 15px;
+    margin: 20px 10px;
+  }
+
+  .donation-detail-container h2 {
+    font-size: 22px;
+  }
+
+  .donation-detail-container button {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+  }
+}
